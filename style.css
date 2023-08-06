@@ -1,1 +1,25 @@
-/* Blank file */
+body {
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template: [header-top] 100px [header-end content-start] 1fr [content-end] / 
+                    [sidebar-start] 1fr [sidebar-end content-start] 5fr [content-end];
+}
+
+#sidebar{
+    grid-row: 1 / -1;
+
+    background-color: teal;
+    color: white;
+}
+
+#header{
+    background-color: beige;
+}
+
+#content{
+    background-color: lightcoral;
+}
