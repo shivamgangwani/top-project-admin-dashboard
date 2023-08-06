@@ -7,7 +7,7 @@ body {
 .container {
     height: 100vh;
     display: grid;
-    grid-template: [header-top] 150px [header-end content-start] 1fr [content-end] / 
+    grid-template: [header-top] 1fr [header-end content-start] 6fr [content-end] / 
                     [sidebar-start] 1fr [sidebar-end content-start] 5fr [content-end];
 }
 
@@ -22,7 +22,7 @@ body {
 }
 
 #logo {
-    display: inline-flex;
+    display: flex;
     align-items: center;
 }
 
@@ -41,7 +41,7 @@ body {
     color: white;
     text-decoration: none;
     font-size: 1.25rem;
-    display: inline-flex;
+    display: flex;
     align-items: center;
 }
 
@@ -54,6 +54,93 @@ body {
 
 #header{
     background-color: beige;
+    display: grid;
+    grid-template: 1fr 2fr / 3fr 2fr;
+    padding: 0.4rem 2rem;
+}
+
+.header-icon {
+    height: 18px;
+    width: auto;
+    margin-right: 1rem;
+}
+
+#search-bar {
+    display: flex;
+    align-items: center;
+}
+
+#search-bar input[type='search'] {
+    border: 0px;
+    font-size: 1rem;
+    height: 1.6rem;
+    flex-grow: 1;
+    border-radius: 12px;
+    padding: 0rem 1rem;
+}
+
+#account-bar {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-weight: bold;
+}
+
+.avatar-thumbnail {
+    height: 50px; 
+    width: auto;
+    border-radius: 60px;
+    margin: 0rem 2rem;
+}
+
+.avatar-thumbnail-large {
+    height: 80px; 
+    width: auto;
+    margin-left: 0rem;
+}
+
+#greeting {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    justify-content: start;
+}
+
+#greeting-impersonal {
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+}
+
+#greeting-personal {
+    font-size: 1.6rem;
+}
+
+#user-actions {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+#user-actions button {
+    border: 0px;
+    background-color: teal;
+    color: white;
+    padding: 0.6rem 1.8rem;
+    border-radius: 24px;
+    margin: 0rem 1rem;
+    font-size: 1rem;
+}
+
+#user-actions button:hover {
+    opacity: 0.9;
+}
+
+#user-actions button:active {
+    background-color: black;
+}
+
+#user-actions button:focus {
+    outline: 2px solid black;
 }
 
 #content{
