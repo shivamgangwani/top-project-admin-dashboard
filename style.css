@@ -19,7 +19,7 @@ body {
     color: white;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 1fr 1fr;
+    grid-template-rows: 100px 1fr;
 }
 
 #logo {
@@ -34,6 +34,9 @@ body {
     margin-right: 1rem;
 }
 
+.sidebar-item {
+    transition: 0.2s;
+}
 .sidebar-item:hover { 
     background-color: #141414;
 }
@@ -47,7 +50,12 @@ body {
     padding: 1rem 1rem;
 }
 
+.sidebar-item:hover img {
+    height: 36px;
+}
+
 .sidebar-item img{
+    transition: 0.2s;
     height: 24px;
     width: auto;
     filter: invert(100%);
@@ -69,7 +77,16 @@ body {
 
 .header-icon {
     margin-right: 1rem;
-    filter: invert()
+    filter: invert();
+    transition: 0.2s;
+}
+
+#search-bar .header-icon:hover {
+    transform: scale(1.2);
+}
+
+#account-bar .header-icon:hover {
+    transform: rotate(-30deg);
 }
 
 #search-bar {
@@ -84,6 +101,13 @@ body {
     flex-grow: 1;
     border-radius: 12px;
     padding: 0rem 1rem;
+    transition: 0.2s;
+    outline: none;
+}
+
+#search-bar input[type='search']:focus {
+    height: 2.4rem;
+    font-size: 1.2rem;
 }
 
 #account-bar {
@@ -150,7 +174,7 @@ body {
 #content{
     background-color: #fda4af;
     display: grid;
-    grid-template: 1fr 1fr / 3fr 1fr;
+    grid-template: 1fr / 3fr 1fr;
     padding: 1rem 2rem;
     background-color: lightgray;
     gap: 40px;
@@ -172,8 +196,24 @@ body {
     background-color: white;
     padding: 2rem 1rem;
     border-radius: 6px;
-    border-left: 9px solid goldenrod;
+    border-left: 12px solid goldenrod;
+    padding-left: calc(2rem + 24px);
     box-shadow: 6px 4px 5px black;
+    transition: 0.2s;
+}
+
+.project-card:hover {
+    padding-left: 2rem;
+    border-left: 36px solid lightcoral;
+}
+
+.project-card:hover .project-actions {
+    transform: scale(1.3) translateX(-70%);
+}
+
+
+.project-card:hover .project-actions:hover img:hover {
+    transform: scale(1.5) rotateZ(-8deg);
 }
 
 .project-title {
@@ -191,6 +231,11 @@ body {
 
 .project-actions {
     align-self: end;
+    transition: 0.2s;
+}
+
+.project-actions img {
+    transition: 0.2s;
 }
 
 #announcements {
@@ -222,17 +267,34 @@ body {
     color: grey;
 }
 
+#trending-section {
+    margin-top: 2rem;
+}
+
 #trending {
-    background-color: white;
-    border-radius: 12px;
-    padding: 2rem 2rem;
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
 .trending-user {
+    background-color: white;
+    padding: 1rem 2rem;
     display: flex;
+    transition: 0.2s;
+}
+
+.trending-user:nth-child(1) {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.trending-user:last-child {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.trending-user-image {
+    transition: 0.2s;
 }
 
 .trending-user-image img {
@@ -240,9 +302,26 @@ body {
 }
 
 .trending-user-person-name {
+    transition: 0.2s;
     color: grey;
     font-size: 0.8rem;
     margin-top: 0.4rem;
+}
+
+.trending-user:hover {
+    background-color: lightcoral;
+}
+
+.trending-user:hover .trending-user-image {
+    transform: scale(1.2);
+}
+
+.trending-user:hover .trending-user-person-name {
+    transform: scale(1.2) translateX(5px);
+}
+
+.trending-user:hover div {
+    color: white;
 }
 
 .project-actions .icon {
